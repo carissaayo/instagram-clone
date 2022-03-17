@@ -100,7 +100,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
             <ChatIcon className="btn" />
             <PaperAirplaneIcon className="btn" />
           </div>
-          {/* <BookmarkIcon className="btn " /> */}
+         
         </div>
       )}
       <div>
