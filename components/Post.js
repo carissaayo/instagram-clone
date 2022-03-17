@@ -89,18 +89,18 @@ const Post = ({ id, username, userImg, img, caption }) => {
       <img src={img} className="object-cover w-full" />
       {/* Buttons */}
       {session && (
-        <div className="flex justify-between px-4 pt-4">
+        <div className="flex justify-between px-4 pt-4 ">
           <div className="flex space-x-4">
             {hasLiked ? (
               <HeartIconFilled
                 onClick={likePost}
-                className="btn text-red-500 "
+                className="btn text-red-500 w-12"
               />
             ) : (
-              <HeartIcon onClick={likePost} className="btn" />
+              <HeartIcon onClick={likePost} className="btn w-12" />
             )}
-            <ChatIcon className="btn" />
-            <PaperAirplaneIcon className="btn" />
+            <ChatIcon className="btn w-12" />
+            <PaperAirplaneIcon className="btn w-12" />
           </div>
         </div>
       )}
