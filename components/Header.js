@@ -53,7 +53,7 @@ const Header = () => {
           </div>
         </div>
         <div className="flex items-center justify-end space-x-4">
-          <MenuIcon className="h-6 md:hidden cursor-pointer" />
+          <MenuIcon className="h-6 w-6  md:hidden cursor-pointer" />
           <HomeIcon
             onClick={() => router.push("/")}
             className="navBtn hidden md:inline-flex"
@@ -76,7 +76,7 @@ const Header = () => {
               {session && (
                 <PlusCircleIcon
                   onClick={() => setOpen(true)}
-                  className=" inline-flex h-6 md:hidden cursor-pointer hover:scale-125 transition-all duration-150 ease-out "
+                  className=" inline-flex h-6 w-6 md:hidden cursor-pointer hover:scale-125 transition-all duration-150 ease-out "
                 />
               )}
               <img
