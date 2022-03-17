@@ -97,7 +97,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
                 className="btn text-red-500 w-6"
               />
             ) : (
-              <HeartIcon onClick={likePost} className="btn w-12" />
+              <HeartIcon onClick={likePost} className="btn w-6" />
             )}
             <ChatIcon className="btn w-6" />
             <PaperAirplaneIcon className="btn w-6" />
