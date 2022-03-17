@@ -94,13 +94,13 @@ const Post = ({ id, username, userImg, img, caption }) => {
             {hasLiked ? (
               <HeartIconFilled
                 onClick={likePost}
-                className="btn text-red-500 w-12"
+                className="btn text-red-500 w-6"
               />
             ) : (
               <HeartIcon onClick={likePost} className="btn w-12" />
             )}
-            <ChatIcon className="btn w-12" />
-            <PaperAirplaneIcon className="btn w-12" />
+            <ChatIcon className="btn w-6" />
+            <PaperAirplaneIcon className="btn w-6" />
           </div>
         </div>
       )}
