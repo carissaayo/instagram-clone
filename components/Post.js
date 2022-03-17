@@ -3,7 +3,6 @@ import {
   HeartIcon,
   ChatIcon,
   PaperAirplaneIcon,
-  BookmarkIcon,
   EmojiHappyIcon,
 } from "@heroicons/react/outline";
 import { HeartIcon as HeartIconFilled } from "@heroicons/react/solid";
@@ -42,7 +41,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
   useEffect(
     () =>
       setHasLiked(
-        likes.findIndex(like => like.id === session?.user?.uid) !== -1
+        likes.findIndex((like) => like.id === session?.user?.uid) !== -1
       ),
     [likes]
   );
@@ -93,20 +92,24 @@ const Post = ({ id, username, userImg, img, caption }) => {
         <div className="flex justify-between px-4 pt-4">
           <div className="flex space-x-4">
             {hasLiked ? (
-              <HeartIconFilled onClick={likePost} className="btn text-red-500" />
-              ) : (
-                <HeartIcon onClick={likePost} className="btn" />
+              <HeartIconFilled
+                onClick={likePost}
+                className="btn text-red-500"
+              />
+            ) : (
+              <HeartIcon onClick={likePost} className="btn" />
             )}
             <ChatIcon className="btn" />
             <PaperAirplaneIcon className="btn" />
           </div>
-         
         </div>
       )}
       <div>
         {/* caption */}
         <p className="p-5 truncate">
-          {likes.length> 0 && (<p className="font-bold mb-1">{likes.length} likes</p>)}
+          {likes.length > 0 && (
+            <p className="font-bold mb-1">{likes.length} likes</p>
+          )}
           <span className="font-bold mr-1">{username}</span>
           {caption}
         </p>
@@ -124,7 +127,9 @@ const Post = ({ id, username, userImg, img, caption }) => {
                   alt=""
                 />
                 <p className="text-sm flex-1">
-                  <span className="font-bold mr-2">{comment.data().username}</span>
+                  <span className="font-bold mr-2">
+                    {comment.data().username}
+                  </span>
                   {comment.data().comment}
                 </p>
                 <Moment fromNow className="pr-5  text-sm">

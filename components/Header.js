@@ -53,13 +53,11 @@ const Header = () => {
           </div>
         </div>
         <div className="flex items-center justify-end space-x-4">
-          
-            <MenuIcon className="h-6 md:hidden cursor-pointer" />
-            <HomeIcon
-              onClick={() => router.push("/")}
-              className="navBtn hidden md:inline-flex"
-            />
-    
+          <MenuIcon className="h-6 md:hidden cursor-pointer" />
+          <HomeIcon
+            onClick={() => router.push("/")}
+            className="navBtn hidden md:inline-flex"
+          />
 
           {session ? (
             <>

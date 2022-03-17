@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import { DUMMY_DATA } from "../utils/DUMMY_DATA";
 
-
 const Suggestions = () => {
-
-
-   
   return (
     <div className="mt-4 ml-10">
       <div className="flex justify-between text-sm mb-5">
@@ -33,6 +29,6 @@ const Suggestions = () => {
       ))}
     </div>
   );
-}
+};
 
-export default Suggestions
+export default Suggestions;
