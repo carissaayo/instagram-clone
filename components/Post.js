@@ -100,7 +100,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
             <ChatIcon className="btn" />
             <PaperAirplaneIcon className="btn" />
           </div>
-          <BookmarkIcon className="btn " />
+          {/* <BookmarkIcon className="btn " /> */}
         </div>
       )}
       <div>
@@ -124,7 +124,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
                   alt=""
                 />
                 <p className="text-sm flex-1">
-                  <span className="font-bold">{comment.data().username}</span>
+                  <span className="font-bold mr-2">{comment.data().username}</span>
                   {comment.data().comment}
                 </p>
                 <Moment fromNow className="pr-5  text-sm">

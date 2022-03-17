@@ -15,7 +15,7 @@ import { modalState } from "../atoms/modalAtom";
 
 const Header = () => {
   const { data: session } = useSession();
-  const [open,setOpen]= useRecoilState(modalState)
+  const [open, setOpen] = useRecoilState(modalState);
   const router = useRouter();
   return (
     <div className="shadow-sm border-b bg-white sticky top-0 z-50">
@@ -52,30 +52,35 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="flex items-center justify-end space-x-4 ">
-          <HomeIcon onClick={() => router.push("/")} className="navBtn" />
-          {session && (
-            <PlusCircleIcon
-              onClick={() => setOpen(true)}
-              className=" inline-flex h-6 md:hidden cursor-pointer hover:scale-125 transition-all duration-150 ease-out "
+        <div className="flex items-center justify-end space-x-4">
+          
+            <MenuIcon className="h-6 md:hidden cursor-pointer" />
+            <HomeIcon
+              onClick={() => router.push("/")}
+              className="navBtn hidden md:inline-flex"
             />
-          )}
+    
 
-          <MenuIcon className="h-6 md:hidden cursor-pointer" />
           {session ? (
             <>
-              <div className="relative navBtn">
-                <PaperAirplaneIcon className="navBtn rotate-45" />
+              <div className="relative hidden md:inline-flex">
+                <PaperAirplaneIcon className="navBtn rotate-45 " />
                 <div className="absolute -top-2 -right-1 text-xs w-5 h-5 bg-red-500 rounded-full flex items-center justify-center animate-pulse text-white">
                   3
                 </div>
               </div>
               <PlusCircleIcon
                 onClick={() => setOpen(true)}
-                className="navBtn "
+                className="navBtn hidden md:inline-flex"
               />
-              <UserGroupIcon className="navBtn" />
-              <HeartIcon className="navBtn" />
+              <UserGroupIcon className="navBtn hidden md:inline-flex" />
+              <HeartIcon className="navBtn hidden md:inline-flex" />
+              {session && (
+                <PlusCircleIcon
+                  onClick={() => setOpen(true)}
+                  className=" inline-flex h-6 md:hidden cursor-pointer hover:scale-125 transition-all duration-150 ease-out "
+                />
+              )}
               <img
                 onClick={signOut}
                 src={session.user.image}
