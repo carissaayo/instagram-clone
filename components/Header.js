@@ -40,7 +40,7 @@ const Header = () => {
             height={200}
           />
         </div>
-        <div className="max-w-xs">
+        <div className="max-w-none">
           <div className="relative mt-1 p-3 rounded-md ">
             <div className="absolute inset-y-0 pl-3 flex items-center pointer-events-none">
               <SearchIcon className="h-5 text-gray-500" />
@@ -52,8 +52,8 @@ const Header = () => {
             />
           </div>
         </div>
-        <div className="flex items-center justify-end space-x-4">
-          <MenuIcon className="h-6 w-6  md:hidden cursor-pointer" />
+        <div className="flex items-center justify-end space-x-4 " >
+          <MenuIcon className="h-6 w-8  md:hidden cursor-pointer" />
           <HomeIcon
             onClick={() => router.push("/")}
             className="navBtn hidden md:inline-flex"
@@ -76,7 +76,7 @@ const Header = () => {
               {session && (
                 <PlusCircleIcon
                   onClick={() => setOpen(true)}
-                  className=" inline-flex h-6 w-6 md:hidden cursor-pointer hover:scale-125 transition-all duration-150 ease-out "
+                  className=" inline-flex h-6 w-8 md:hidden cursor-pointer hover:scale-125 transition-all duration-150 ease-out "
                 />
               )}
               <img
