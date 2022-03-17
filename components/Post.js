@@ -94,7 +94,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
             {hasLiked ? (
               <HeartIconFilled
                 onClick={likePost}
-                className="btn text-red-500"
+                className="btn text-red-500 "
               />
             ) : (
               <HeartIcon onClick={likePost} className="btn" />
